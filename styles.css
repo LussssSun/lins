@@ -1,18 +1,19 @@
 /*div*/
 .tab {
   display: flex;
-  border-top: 3px solid rgb(208, 130, 159);
-  border-bottom: 3px solid rgb(208, 130, 159);
-  justify-content: center; /* 水平居中 */
-  align-items: center;
-  margin: 0 0;
-  padding: 0
+  width: 80%;
+ 
+  justify-content: center; 
+  place-items: center;  
+  background: linear-gradient(to bottom, #f8ccde, #fff8f8 90%);
+  border-inline:3px solid rgba(220, 162, 183, 0.941);
+  max-width: 600px;
 }
 .container {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1.8fr;
-  height: auto;  /* 让内容撑开 frame */
+  height: auto;  
 }
 .card {
   background: transparent;
@@ -21,7 +22,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
 }
 
 .image {
@@ -37,14 +37,17 @@
 
   }
 .top {
-  background: radial-gradient(ellipse, #efb9d1, #f2e3e3);
-  background-size: cover;
-  padding: 8px 16px;
+  display:grid;
+  grid-template-columns: repeat(3,auto);
+  width: 80%;
+  max-width: 600px;
+  margin: 1em auto; 
+  height:2em;
+  border: 3px solid rgba(220, 162, 183, 0.941);
+  background: linear-gradient(to top, #ffcfe3, #f2e3e3 80%);
   text-align: center;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 0%;
 }
-
 /*text style*/
 h2{
   font-family: "Allura", cursive;
@@ -58,28 +61,43 @@ h5{
   font-size:0.6em;
 }
 .Meow {
-  font-size: 1.2em;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  border: none;
-  color: white;
-  background-color: rgb(240, 189, 197);
+  height=1.8em;
+  width=2.3em;
+  align-self:center;
+  font-size: 0.8em;
+  padding: 0.25em 1em;
+  font-family: "DynaPuff", system-ui;
+  border-radius: 25px;
+  border-color: rgb(252, 211, 226);
+  color: rgba(255, 255, 255, 0.882);
+  background:radial-gradient(circle,rgb(255, 215, 225),rgb(240, 189, 205));
+  box-shadow:0 10px 20px rgb(195, 106, 136);
+}
+.Cross{
+  background-color: transparent;
+  border:none;
+  font-size: 0.5em;
 }
 .button{
   background-color:rgb(92, 89, 89);
-  border-color:solid antiquewhite;
+  border:3px solid pink;
   border-radius: 12px;
   font-family: "Aguafina Script", cursive;
   font-size: 1em;
   color: rgb(213, 158, 167);
-  border: none;
+}
+.tab-buttons{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 0;
 }
 .buttons{
   background-color: transparent;
   font-family: "Qwitcher Grypen", cursive;
   font-size: 1.8em;
-  color: rgb(210, 136, 157);
-  border: none;
+  color: rgb(192, 129, 147);
+  border:none;
+  text-decoration: underline;
   padding:0;
 }
 .line {
@@ -111,8 +129,8 @@ h5{
 }
 
 /*body*/
-*{
-  margin:0.2em;
+frame,.tab,.tab-buttons,.tab-content.active,.line{
+  margin:0 auto;
   padding=0;
 }
 body {
@@ -125,18 +143,29 @@ body {
 }
 
 .frame {
-  background: rgba(255, 255, 255, 0.85); /* 半透明背景 */
-  border: 3px solid rgb(213, 140, 167);
-  border-radius: 12px;
+  background: radial-gradient(circle, #e5b5ca, #fefdfd);
+  border: 3px solid rgba(220, 162, 183, 0.941);
   box-shadow: 0 8px 25px rgba(213, 140, 167, 0.5);
-  width: 90%;
+  width: 80%;
   max-width: 600px;
-  padding: 16px;
   margin: 1em auto; /* 居中 */
   min-height: 400px;
+  margin-top: 0%;
 }
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr; /* 单栏 */
   }
+}
+
+
+.tab-buttons button{
+  margin:0 0.14em;
+  cursor:pointer;
+}
+.tab-content{
+  display:none;
+}
+.tab-content.active{
+  display:block;
 }
