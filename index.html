@@ -7,51 +7,101 @@
     <title>Lin's profile</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Allura&family=Playwrite+US+Modern:wght@100..400&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Allura&family=Playwrite+US+Modern:wght@100..400&family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2 class="top">
+        <img src="linsIcecream.jpg" class="imgIcecream" />
+      <button class="Meow" id="meow">Meow</button>
+      <button class="Cross" id="cross">─ ㄨ</button>
+    </h2>
+    </div>
+    <div class="tab">
+      <div class="tab-buttons">
+        <button class="buttons" data-tab="home">Home</button>
+        <h5 class="line">♰</h5>
+        <button class="buttons" data-tab="profile">Profile</button>
+        <h5 class="line">♰</h5>
+        <button class="buttons" data-tab="social">Social</button>
+        <h5 class="line">♰</h5>
+        <button class="buttons" data-tab="gallery">Gallery</button>
+      </div>
+    </div>
 
-</head>
-    <body>
+    <div class="tab-content active" id="home">
       <div class="frame">
-        <h2 class="top">
-          <button class="Meow" id="meow">Meow</button>
-        </h2>
-        <div class="tab">
-          <button class="buttons" id="HomePage">Home</button>
-            <h5 class="line">♰</h5>
-            <button class="buttons" id="ProfilePage">Profile</button>
-            <h5 class="line">♰</h5>
-            <button class="buttons" id="SocialPage">Social</button>
-            <h5 class="line">♰</h5>
-            <button class="buttons" id="GalleryPage">gallery</button>
-            <h5 class="line">♰</h5>
-        </div>
-    
         <div class="container">
           <div class="card">
-            <img src="linsProfile.jpg" class="image"/>  
+            <img src="linsProfile.jpg" class="image" />
             <h2>Welcome</h2>
             <h5>Pros:She/Them⚢</h5>
             <button class="button" id="gf">Here is my beloved gf</button>
-            <h5>i love my gf<3 </h5>
+            <h5>i love my gf<3</h5>
           </div>
           <div class="card">
-              <h3 class="text">feel free to interact >_<<br>
-                i'm in FNAF, IDV, HSR, PJSK fandom</h3>
-              <img src="linsMeat.jpg" class="imageMeat"/>
-              <div class="align">
-                <h2 class="title">Likes:</h2>
-                <h3 class="text">kittens, emo/scene style, matcha!!</h3>
-                <h3 class="text">cutecore, gorecore, etc!</h3>
-                <h2 class="title">Hates:</h2>
-                <h3 class="text">judgmental ppl, disrespectful ppl, problematic ppl, etc</h3>
-              </div>
+            <h3 class="text">
+              feel free to interact >_<<br />i'm in FNAF, IDV, HSR, PJSK fandom
+            </h3>
+            <img src="linsMeat.jpg" class="imageMeat" />
+            <div class="align">
+              <h2 class="title">Likes:</h2>
+              <h3 class="text">kittens, emo/scene style, matcha!!</h3>
+              <h3 class="text">cutecore, gorecore, etc!</h3>
+              <h2 class="title">Hates:</h2>
+              <h3 class="text">
+                judgmental ppl, disrespectful ppl, problematic ppl, etc
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
-    </body>
-
-    <script>
-    document.getElementById("gf").onclick = function () {
-      window.location.href = "https://lusssssun.github.io/ponytownprofile/";
-    };
-  </script>
+    </div>
+    <div class="tab-content" id="profile">
+      <div class="frame">
+        <div class="container">
+          <div class="card">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="social">
+      <div class="frame">
+        <div class="container">
+          <div class="card">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="gallery">
+      <div class="frame">
+        <div class="container">
+          <div class="card">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll(".tab-buttons button");
+      const contents = document.querySelectorAll(".tab-content");
+  
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tabId = btn.dataset.tab;
+          contents.forEach((c) => c.classList.remove("active"));
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+    });
+    </script>
+  </body>
 </html>
