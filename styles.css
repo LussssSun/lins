@@ -135,3 +135,8 @@ body {
   display: flex;
   flex-direction: column; /* 竖直分块 */
 }
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* 单栏 */
+  }
+}
