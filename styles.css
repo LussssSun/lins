@@ -134,6 +134,10 @@ body {
   display: flex;
   flex-direction: column; /* 竖直分块 */
 }
+.frame {
+  height: 70vh;  /* 70% 的视口高度 */
+  max-height: 90vh; /* 不超出屏幕 */
+}
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr; /* 单栏 */
