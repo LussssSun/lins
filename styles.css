@@ -30,6 +30,7 @@
   justify-content: space-between;
 }
 .image {
+  margin-top: 1.6em;
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -65,13 +66,20 @@ h2{
   color:rgb(208, 131, 154);
 
 }
-
+.wel{
+  font-family: "Allura", cursive;
+  line-height: 0;
+  font-size:2.1em;
+  color:rgb(215, 142, 164);
+  text-decoration:underline;
+  text-decoration-thickness: 2px;
+}
 h5{
   font-family: "Playwrite US Modern", cursive;
   font-size:0.6em;
 }
 .Meow {
-  height=1.8em;
+  height=3em;
   width=2.3em;
   align-self:center;
   font-size: 0.8em;
