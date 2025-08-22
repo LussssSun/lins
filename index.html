@@ -34,7 +34,7 @@
       </div>
     </div>
 <!--homePage-->
-    <div class="tab-content active" id="home">
+    <div class="tab-content" id="home">
       <div class="frame">
         <div class="container">
           <div class="card">
@@ -48,7 +48,7 @@
             <h3 class="text">
               feel free to interact >_<<br />i'm in FNAF, IDV, HSR, PJSK fandom
             </h3>
-            <img id="profilepic_" src="linsMeat.jpg" class="imageMeat" />
+            <img id="profilepic_"src="linsMeat.jpg" class="imageMeat" />
             <div class="align">
               <h2 class="title">Likes:</h2>
               <h3 class="text">My gf who code for this page (she added herself)</h3>
@@ -83,7 +83,7 @@
               ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⣾⣿⣦⣀⣴⣿⣷<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠛⣻⣿⠛⣿⣟⠛<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀ ⢠⣾⣿⡏ ⠀⢹⣿⣷⡄<br>
-⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⡟ ⠀⠀⠀⢻⡀
+⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀&nbsp;⡟ ⠀⠀⠀⢻⡀
             </p>
             <div class="align">
               <h2>Lin/Puuri</h2>
@@ -98,8 +98,19 @@
     </div>
     <div class="tab-content" id="social">
       <div class="frame">
-        <div class="container">
+        <div class="containersocial">
           <div class="card">
+            <div class="align">
+              <h2 class="wel"> Click to view social<h2>
+              <button class="socialButton">Instagram</button>
+              <button class="socialButton">X</button>
+              <button class="socialButton">Spotify</button>
+              <button class="socialButton">Github</button>
+              <button class="socialButton">Patreon</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="linssocial.jpg" class="imageSocial">
           </div>
         </div>
       </div>
@@ -128,10 +139,23 @@
       document.getElementById("gf").onclick = function () {
       window.location.href = "https://lusssssun.github.io/ponytownprofile/";
     };
+      const socialButton=document.querySelectorAll(".socialButton");
+      const urls=[
+        "https://www.instagram.com/linnpuuri?igsh=MWpmbDE2eXhudXBtbQ==",
+        "https://x.com/lianjiene?t=lU_meba5eglBhf664nCZ5w&s=09",
+        "https://open.spotify.com/user/317acuwq3oae6di4anzypmk4pw5m?si=U4s4SKRwRw2sQr52hISz8g",
+        "https://github.com/FUG0NORT",
+        "https://www.patreon.com/profile/creators?u=180564638"
+      ];
+      socialButton.forEach((btn,index)=>{
+        btn.addEventListener("click",()=>{
+          window.open(urls[index],"_blank");
+        });
+      });
     const btn=document.getElementById("meowbutton");
     btn.addEventListener("click",()=>{
-      document.getElementById("profilepic").src="LinsKittyProfile.jpg";
-      document.getElementById("profilepic_").src="linsKitty.jpg";
+      document.getElementById("profilepic").src="";
+      document.getElementById("profilepic_").src="";
     });
   });
     </script>
