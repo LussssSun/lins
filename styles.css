@@ -9,24 +9,14 @@
   border-inline:3px solid rgba(220, 162, 183, 0.941);
   max-width: 600px;
 }
-.container {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 1.8fr;
-  height: auto;  
+.card {
+  background: transparent;
+  line-height:1.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.container_{
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1.2fr 1.6fr;
-  height: auto;  
-}
-.containersocial{
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 1.3fr;
-  height: auto;
-  }
 .card {
   background: transparent;
   line-height:1.8em;
@@ -47,6 +37,39 @@
   text-align: center;
   margin-bottom: 0%;
 }
+.align {
+  display: table;
+  text-align: left;
+  padding-left: 1em;
+}
+
+/*containers*/
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1.8fr;
+  height: auto;  
+}
+.container_{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1.2fr 1.6fr;
+  height: auto;  
+}
+.containersocial{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1.3fr;
+  height: auto;
+  }
+.containergallery{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+}
+
+
 /* images */
 .image {
   margin-top: 1.6em;
@@ -68,16 +91,30 @@
   width:250px;
   height:260px;
   object-fit:cover;
-  border-radius:15px;
+  border-radius:10px;
 }
-/*text style*/
+.imageBunny{
+  width:230px;
+  height:200px;
+  object-fit:cover;
+  margin-top:1.5em;
+  border-radius:10px;
+}
+.imagePig{
+  width:200px;
+  height:210px;
+  margin-bottom:2em;
+  object-fit:cover;
+  border-radius:10px;
+}
 
+
+/*text style*/
 h2{
   font-family: "Allura", cursive;
   text-shadow: #784c60;
   font-size:2.1em;
   color:rgb(208, 131, 154);
-
 }
 .wel{
   font-family: "Allura", cursive;
@@ -87,10 +124,36 @@ h2{
   text-decoration:underline;
   text-decoration-thickness: 2px;
 }
+.click{
+  font-family: "Allura", cursive;
+  line-height: 1em;
+  margin-bottom: 0%;
+  font-size:1.5em;
+  color:rgb(198, 139, 157);
+}
+.title {
+  font-family: "Aguafina Script", cursive;
+  font-size: 1.4em;
+  color: rgb(207, 138, 149);
+  margin-bottom:-0.5em;
+}
+.text{
+  font-family: "Playwrite US Modern", cursive;
+  font-size: 0.8em;
+  color: rgb(255, 255, 255)99, 83, 86);
+}
+.text::before {
+  content: "ꨄ︎";
+  margin-right: 0.6em;
+}
 h5{
   font-family: "Playwrite US Modern", cursive;
   font-size:0.6em;
 }
+
+
+
+/*buttons*/
 .Meow {
   height=3em;
   width=2.3em;
@@ -136,13 +199,14 @@ h5{
   font-size:0.7em;
   width:140px;
   height:60px;
-  margin-b0ttom:5px;
   font-family: "DynaPuff", system-ui;
   border-radius: 25px;
   border-color: rgb(252, 211, 226);
   color: rgba(255, 255, 255, 0.882);
   background:radial-gradient(circle,rgb(255, 215, 225),rgb(240, 189, 205));
 }
+
+/*border*/
 .border{
   margin:0;
   color:rgb(204, 151, 165);
@@ -155,26 +219,13 @@ h5{
   font-size:1.4em;
   padding: 0
 }
-.title {
-  font-family: "Aguafina Script", cursive;
-  font-size: 1.4em;
-  color: rgb(207, 138, 149);
-  margin-bottom:-0.5em;
+.bed{
+  line-height: 0.9em;
+  font-size:1.2em;
+  color:rgb(198, 139, 157);
 }
-.text{
-  font-family: "Playwrite US Modern", cursive;
-  font-size: 0.8em;
-  color: rgb(255, 255, 255)99, 83, 86);
-}
-.text::before {
-  content: "ꨄ︎";
-  margin-right: 0.6em;
-}
-.align {
-  display: table;
-  text-align: left;
-  padding-left: 1em;
-}
+
+
 /*body*/
 .tab,.tab-buttons,.tab-content.active,.line{
   margin:0 auto;
@@ -205,6 +256,12 @@ body {
   }
   .container_{
     grid-template-columns: 1fr; /* 单栏 */
+  }
+  .containersocial{
+    grid-template-columns:1fr;
+  }
+  .containergallery{
+    grid-template-columns:1fr;
   }
 }
 
